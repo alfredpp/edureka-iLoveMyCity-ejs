@@ -6,3 +6,8 @@ body {
 a {
   color: #00B7FF;
 }
+
+p.headingFont{
+  font-family: lobster-two, cursive;
+  font-size: 40px;
+}
