@@ -8,7 +8,7 @@ app.set('view engine','ejs');
 app.use(express.static(__dirname + '/public'));
 
 app.get('/',routes.home);
-app.get('/:city',routes.city);
+app.get('/:painter',routes.painter);
 
 var port = process.env.PORT || 8085;
 

@@ -1,40 +1,31 @@
 exports.home=function(req,res){
-  res.render('home',{title:'iLoveMyCity',
-                    headline:'We believe that every city have something to say'
-                    });
-                  }
+  res.render('home',{
+    title:'Famous Painters',
+    headline:'Beautiful paintings by talented painters.'
+  });
+}
 
-
-exports.city=function(req,res){
-    var cityName=req.params.city;
+exports.painter=function(req,res){
+    var painterName=req.params.painter;
     var title,heading;
     var imageCount=4;
 
-    if(cityName==='berlin'){
-       title="Berlin";
-       heading="Berlin: Where love is in the air";
+    if(painterName==='da-vinci'){
+       title="Leonardo da Vinci";
+       heading="Simplicity is the ultimate sophistication.";
     }
-    else if(cityName==='paris'){
-       title="Paris";
-       heading="Paris: Good talkers are only found in Paris";
+    else if(painterName==='van-gogh'){
+       title="Vincent van Gogh";
+       heading="I feel that there is nothing more truly artistic than to love people.";
     }
-    else if(cityName==='madrid'){
-       title="Madrid";
-       heading="Madrid: Buzz, Beautiful architecture and Football";
-    }
-    else if(cityName==='london'){
-       title="London";
-       heading="London: Sparkling, Still, Food, Gorgeous";
-    }
-    else if(cityName==='newyork'){
-       title="New York";
-       heading="New York: Come to New York to become someone new";
-       imageCount=6;
+    else if(painterName==='michelangelo'){
+       title="Michelangelo";
+       heading="Every block of stone has a statue inside it and it is the task of the sculptor to discover it.";
     }
 
-    res.render('city',{
+    res.render('painter',{
         title:title,
         headline:heading,
-        city:cityName,
+        painter:painterName,
         numberOfImages:imageCount});
   }
